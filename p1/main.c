@@ -3,7 +3,7 @@ int main() {
 	int amount;
 	scanf("%d", &amount);
 	int A,B,C;
-	int jouge = 0;
+	int jouge = false;
 	for (A = 1; A <= amount / 900; A++) {
 		for (B = 2; B <= amount / 750; B += 2) {
 			for (C = 1; C <= amount / 200; C++) {
@@ -11,13 +11,13 @@ int main() {
 					if (C < A || C < B)
 					{
 						printf("%d %d %d\n", A, B, C);
-						jouge = 1;
+						jouge = true;
 					}
 				}		
 			}
 		}
 	}
-	if (jouge == 0) {
+	if (!jouge) {
 		printf("none");
 	}
 }
